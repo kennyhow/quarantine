@@ -5,7 +5,7 @@ import json, pprint, matplotlib
 import matplotlib.pyplot as plt
 import related_programming # keyword generator, only for use for this test run
 
-matplotlib.rcParams.update({'font.size': 8}) # reduces font size so that the graph labels are readable
+# matplotlib.rcParams.update({'font.size': 8}) # reduces font size so that the graph labels are readable
 
 data = list()
 keywords = related_programming.programming_keywords()
@@ -31,7 +31,18 @@ for key in keywords:
     words.append(key)
     word_count.append(keywords[key])
 
-# bar chart
+# bar chart params
+plt.rcParams['axes.labelsize'] = 16
+plt.rcParams['axes.titlesize'] = 16
+plt.rcParams['font.size'] = 8
+
 plt.bar([w[0].upper() + w[1:] for w in words], word_count) # capitalises the first letter of every word
+
+# labels and title
+plt.title('Discussion of programming on reddit in 2015 December')
+plt.xlabel('Programming terms')
+plt.ylabel('Number of times mentioned')
+
+# full screen
 plt.get_current_fig_manager().window.state('zoomed')
 plt.show()
