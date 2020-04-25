@@ -39,7 +39,7 @@ plt.rcParams['font.size'] = 8
 plt.bar([w[0].upper() + w[1:] for w in words], word_count) # capitalises the first letter of every word
 
 # labels and title
-plt.title('Discussion of programming on reddit in 2015 December')
+plt.title('Discussion of programming on reddit in 2005 December')
 plt.xlabel('Programming terms')
 plt.ylabel('Number of times mentioned')
 
