@@ -11,7 +11,7 @@ data = list()
 keywords = related_programming.programming_keywords()
 keywords = {keywords[i]: 0 for i in range(len(keywords))} # keep track of word count
 
-with open('first_try/RC_2005-12', 'r') as file: # we are given a json file
+with open('first_try/RC_2005-12', 'r') as file: # we are given a file containing json
     for line in file:
         data.append(json.loads(line))
 
