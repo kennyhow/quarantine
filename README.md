@@ -1,4 +1,4 @@
-# quarantine
+# Quarantine
 Studying the trend of word usages on the internet over the years.
 
 Todo list:
